@@ -1,0 +1,162 @@
+#tabs {
+    border-bottom:2px solid #B63900;
+}
+#tabs li {
+    float:left;
+    width:93px;
+    text-align:center;
+    height:36px;
+    line-height:36px;
+    margin-right:8px;
+}
+#tabs li a {
+    display:block;
+    height:36px;
+    width:93px;
+    border:1px solid #CCC;
+    border-radius:5px 5px 0 0;
+    background:#E3E3E3;
+    margin-top:-2px;
+}
+#tabs li .select, #tabs li a:hover  {
+    background:#C13801;
+    border:1px solid #C13801;
+    color:#FFF;
+}
+.content {
+    margin-top:30px;
+    width:890px;
+    border:1px solid #CCC;
+    border-bottom:2px solid #CCC;
+    position:relative;
+    display:none;
+}
+.tip {
+    position:absolute;
+    top:-10px;
+    left:50px;
+    padding:0 20px;
+    background:#FBFBFB;
+}
+
+.address {
+    margin:50px 0 90px 70px;
+}
+.address p {
+    margin-left: 20px;
+    text-indent: 24px;
+    line-height: 26px;
+}
+.address input, .address select {
+    width: 250px;
+    height: 25px;
+    border: 1px solid #CCC;
+    line-height: 25px\9;
+    margin:0;
+    margin-bottom: 15px;
+    padding-left: 2px;
+    _vertical-align: middle;
+
+}
+.address select {
+    margin-left: -3px;
+    width: 116px;
+    margin-right: 20px;
+}
+.reset, .submit {
+    width:80px;
+    height:35px;
+    border:none;
+    background:#C13801;
+    color:#FFF;
+    margin:10px 6px 15px 0;
+    cursor:pointer;
+}
+#uploading {
+    margin: 50px 0 90px 70px;
+}
+.content img {
+    border:1px solid #CCC;
+}
+.selectfile {
+    line-height:36px;
+    margin-left:15px;
+}
+#male, #famale {
+    width:auto;
+    height:auto;
+    border:none;
+    vertical-align:middle;
+    line-height:14px;
+}
+
+
+
+
+
+
+/* 邀请 */
+.invent {
+    margin:50px 0 90px 70px;
+}
+.title {
+    padding-right:25px;
+}
+.title em {
+    font-size:16px;
+}
+.box {
+    width:750px;
+    border:1px solid #CCC;
+    border-top:1px solid #717171;
+    padding:10px 0 30px 20px;
+    margin:10px 0 20px 0;
+}
+.box h3 {
+    font-size:14px;
+    line-height:28px;
+}
+.box input {
+    width:480px;
+    height:25px;
+    line-height:25px\9;
+    border:1px solid #CCC;
+    margin:10px 10px 0 0;
+    padding-left:5px;
+}
+.box button, #submitemali {
+    width:80px;
+    height:27px;
+    background:#C43B00;
+    border:none;
+    cursor:pointer;
+    color:#FFF;
+}
+.qqzone, .sina, .tqq, .renren {
+    padding: 0 3px;
+    display: block;
+    float: left;
+    width: 24px;
+    height: 24px;
+    text-indent: -9999px;
+}
+.sina {
+    background-position: -60px -145px;
+}
+.tqq {
+    background-position: -90px -145px;
+}
+.renren {
+    background-position: -120px -145px;
+}
+
+
+
+
+
+
+
+#file, #files {
+    height:25px;
+    line-height: 25px\9;
+}

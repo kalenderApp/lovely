@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>立免网 - 个人管理中心 首页</title>
+    <link type="text/css" rel="stylesheet" href="public.css" />
+    <link type="text/css" rel="stylesheet" href="index.css" />
+</head>
+<body>
+<!-- Header Begin -->
+<div class="wrapper pstrl clearfix">
+    <div id="right">
+        <ul id="tabs" class="clearfix">
+            <li><a class="select" href="#">个人资料</a></li>
+            <li><a href="#">修改密码</a></li>
+        </ul>
+
+        <form action="/" method="post" id="typeform" class="content" style="display:block;">
+            <!--<div class="content">-->
+            <div class="tip">个人资料</div>
+
+            <div class="address">
+                <p>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：<input type="text" name="name" id="enterprisename"></p>
+                <p>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" id="password"></p>
+                <p id="sex">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：<input type="radio" name="sex" id="male" class="sex"><label for="male">男</label><input type="radio" name="sex" id="famale" class="sex"><label for="famale">女</label></p>
+                <p>生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日：<input type="text" name="name" id="birthday "></p>
+                <p>所属地区：
+                    <select name="province" id="province">
+                        <option value="0">请选择省份</option>
+                        <option value="北京">北京</option>
+                        <option value="陕西">陕西</option>
+                        <option value="浙江">浙江</option>
+                    </select>
+                    <select name="area" id="area">
+                        <option value="0">请选择城市</option>
+                        <option value="北京市">北京市</option>
+                        <option value="西安市">西安市</option>
+                        <option value="杭州市">杭州市</option>
+                    </select>
+                </p>
+                <p>配送地址：<input type="text" name="address" id="fulladdress"></p>
+            </div>
+            <input type="reset" class="reset right" value="清 除">
+            <input type="submit" class="submit right" value="确 定">
+
+
+            <!--</div>-->
+        </form><!--个人信息-->
+
+
+
+        <form action="/" method="post" id="modifypassword" class="content">
+            <!--<div class="content">-->
+            <div class="tip">修改密码</div>
+
+            <div class="address">
+                <p>原&nbsp;&nbsp;密&nbsp;&nbsp;码：<input type="password" name="password" id="opassword"> <em class="red">* 6 - 16个字符，区分大小写</em></p>
+                <p>新&nbsp;&nbsp;密&nbsp;&nbsp;码：<input type="password" name="newpassword" id="newpassword"> <em class="red">* 6 - 16个字符，区分大小写</em></p>
+                <p>密码确认：<input type="password" name="renewpassword" id="renewpassword" > <em class="red">* 再次输入，确认是否一致</em></p>
+            </div>
+            <input type="reset" class="reset right" value="清 除">
+            <input type="submit" class="submit right" value="保 存">
+
+
+            <!--</div>-->
+        </form><!--修改密码-->
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<!--以下内容为 Footer-->
+<!-- Footer Begin -->
+<div id="footer">Copyright 北京商促互联信息服务有限责任公司 版权所有 备案：京ICP备10035690</div>
+<!-- Footer End -->
+<script type="text/javascript" src="../javascript/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../jQuery.lovely.js"></script>
+<script type="text/javascript" src="../lovely.js"></script>
+</body>
+</html>
