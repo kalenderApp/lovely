@@ -5,7 +5,7 @@
  *
  * {
  *     fields : {
- *         “#id||.class” : {
+ *         “#id” : {
  *             required : true || false,
  *             message  : "Some Messages",
  *             arg      : "String" || Number || CallBack,
@@ -28,45 +28,47 @@
         "use strict";
         var $this     = $(this),
             error     = true,
-            errFields = [],
+        //errFields = [],
             item;
 
 
-        var makeError = function(error){
+        var makeError = function(error) {
             return $('<span id="'+error.id.attr("id") + '_unLovely" class="unLovelyMessage">'+error.message+'</span>');
         }
 
 
-        var showError = function(message, el){
+        var showError = function(message, el) {
             var $errorMessageId = $("#"+el.attr("id")+'_unLovely'),
                 errorEl;
 
-            if($errorMessageId.length <= 0){
+            if($errorMessageId.length <= 0) {
                 errorEl = makeError({"id":el, "message":message});
                 el.addClass('unlovely').after(errorEl);
             }
+
             $errorMessageId.show();
             el.addClass('unlovely');
         }
 
 
-        var process = function(opts, selector){
+        var process = function(opts, selector) {
             var $selector = $(selector),
                 val       = $selector.val();
 
-            if(opts.trim || $selector.attr("type") !== "password"){
+            if(opts.trim || $selector.attr("type") !== "password") {
                 val = $.trim(val);
             }
 
-            if($selector.attr("type") == "radio" || $selector.find("input").attr("type") == "radio" || $selector.attr("type") == "checkbox" || $selector.find("input").attr("type") == "checkbox"){
+            if($selector.attr("type") == "radio" || $selector.find("input").attr("type") == "radio" || $selector.attr("type") == "checkbox" || $selector.find("input").attr("type") == "checkbox") {
                 val = 1;
             }
 
-            if((opts.required && val == "") || !opts.test(val, opts.arg)){
-                errFields.push($selector);
+
+            if((opts.required && val == "") || !opts.test(val, opts.arg)) {
+                //errFields.push($selector);
                 showError(opts.message,$selector);
                 return false
-            }else{
+            } else {
                 return true
             }
         }
@@ -75,11 +77,11 @@
         var addEvent = function(opts, selector) {
             var $selector = $(selector);
 
-            $selector.bind(config.action||"blur",function(){
+            $selector.bind(config.action||"blur",function() {
                 process(opts, selector);
             });
 
-            $selector.bind("click",function(){
+            $selector.bind("click",function() {
                 $selector.removeClass("unlovely")
                 $("#"+$selector.attr("id")+'_unLovely').hide();
             });
@@ -90,12 +92,12 @@
             error = false;
 
             for (item in config.fields) {
-                if(!process(config.fields[item], item)){
+                if(!process(config.fields[item], item)) {
                     error = true;
                 };
             }
 
-            if(error){
+            if(error) {
                 return false
             }
         }
@@ -110,5 +112,5 @@
 
     }
 
-    $.fn.isLovely.method = {}
+    //$.fn.isLovely.method = {}
 }(jQuery));
